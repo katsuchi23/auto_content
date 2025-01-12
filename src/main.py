@@ -12,9 +12,13 @@ from src.utils import create_video_from_images_and_audio, ensure_output_dirs
 def main():
     """Main function to run the video generation process"""
     # Clean up previous outputs
-    output_dir = Path("output")
-    if output_dir.exists():
-        shutil.rmtree(output_dir)
+    image_output_dir = Path("src/output/images")
+    if image_output_dir.exists():
+        shutil.rmtree(image_output_dir)
+
+    audio_output_dir = Path("src/output/audio")
+    if audio_output_dir.exists():
+        shutil.rmtree(audio_output_dir)
         
     ensure_output_dirs() # create a new directory
 
