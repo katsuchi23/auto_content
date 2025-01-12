@@ -34,7 +34,7 @@ def generate_story(title, model, tokenizer):
         alpaca_prompt.format(
             "You are a knowledgeable assistant that creates engaging and informative facts about various topics from Wikipedia. You always start the sentence with 'Did you know that'. Each fact should provide context and detailed information while maintaining reader interest.", # instruction
             title, # input
-            "", # output - leave this blank for generation!
+            "", # output - leave this blank for generation!!
         ),
     ], return_tensors = "pt").to("cuda")
 
